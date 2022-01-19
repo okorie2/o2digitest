@@ -25,6 +25,16 @@ import FourDots from "./Assets/SVGs/4dotsbelow.svg";
 import BottomRightArrow from "./Assets/SVGs/bottomrightarrow.svg";
 import TenDots from "./Assets/SVGs/10dotsbelow.svg";
 
+import LstEllipse from "./Assets/SVGs/LstEllipse.svg";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
 function App() {
   const headerLottiedefaultOptions = {
     loop: true,
@@ -44,18 +54,18 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="body-div">
       <div className="nav">
         <div>
           {" "}
           <img src={Logo} alt="logo" />{" "}
         </div>
 
-        <div>Product</div>
-        <div>Bike Type</div>
-        <div>About us</div>
-        <div>Testimonials</div>
-        <div>Contact</div>
+        <div className="active">Product</div>
+        <div className="nav-list">Bike Type</div>
+        <div className="nav-list">About us</div>
+        <div className="nav-list">Testimonials</div>
+        <div className="nav-list">Contact</div>
       </div>
       <div className="v-ellipse"></div>
       <div className="intro">
@@ -88,23 +98,26 @@ function App() {
       <div className="leftPear">
         <img src={LeftPear} />
       </div>
-      <div className="md-grid-3">
-        <MdCard
-          title={"Brampoton eBike Kit"}
-          price={"$750.00"}
-          src={BrampEbike}
-        />
-        <MdCard
-          title={"Brampoton eBike Kit"}
-          price={"$750.00"}
-          src={BrampEbike}
-        />
-        <div className="faded-card">
+
+      <div className="mdgrid-cont">
+        <div className="md-grid-3">
           <MdCard
-            title={"Additional eBike Kit"}
-            price={"$250.00"}
+            title={"Brampoton eBike Kit"}
+            price={"$750.00"}
             src={BrampEbike}
           />
+          <MdCard
+            title={"Brampoton eBike Kit"}
+            price={"$750.00"}
+            src={BrampEbike}
+          />
+          <div className="faded-card">
+            <MdCard
+              title={"Additional eBike Kit"}
+              price={"$250.00"}
+              src={BrampEbike}
+            />
+          </div>
         </div>
       </div>
       <div className="arrows">
@@ -116,14 +129,23 @@ function App() {
           <img src={Right} />
         </div>
       </div>
+
       <div className="container">
         <h3>Other Type Of Bikes</h3>
         <div className="sm-grid-5">
-          <SmCard src={SmBike} alt="Hybrid Bikes" title="Hybrid Bikes" />
+          <SmCard
+            src={SmBike}
+            alt="Hybrid Bikes"
+            title="Hybrid Bikes"
+            id="active"
+            cn="tit"
+          />
           <SmCard src={XsEbike} alt="Fixie Bikes" title="Fixie Bikes" />
           <SmCard src={XsEbike} alt="Folding Bikes" title="Folding Bikes" />
           <SmCard src={XsEbike} alt="Mount Bikes" title="Mount Bikes" />
-          <SmCard src={XsEbike} alt="City Bikes" title="City Bikes" />
+          <div className="faded-card">
+            <SmCard src={XsEbike} alt="City Bikes" title="City Bikes" />
+          </div>
         </div>
       </div>
 
@@ -170,9 +192,9 @@ function App() {
           What our cus<span>tom</span>er are saying
         </h3>
         <div className="sm-grid-2">
-          <div>
-            <div>
-              <img src={Avatar} alt="avatar" className="avatar" />{" "}
+          <div className="avatar-div">
+            <div className="avatar">
+              <img src={Avatar} alt="avatar" />{" "}
             </div>
             <div className="sub-title">
               <h4>Edward Newgate</h4>
@@ -241,6 +263,9 @@ function App() {
               <p>How it works</p>
             </div>
           </div>
+        </div>
+        <div className="lstellipse">
+          <img src={LstEllipse} />
         </div>
       </div>
     </div>
