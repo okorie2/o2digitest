@@ -1,6 +1,6 @@
 .carousel {
   overflow: hidden;
-  margin-top: 7%;
+  padding-top: 7%;
   margin-left: 5%;
 }
 .inner {
@@ -13,7 +13,7 @@
   justify-content: center;
   background-color: transparent;
   color: #fff;
-  margin-right: -8%;
+  margin-right: -7%;
 }
 .indicators {
   display: flex;

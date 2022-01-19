@@ -26,7 +26,7 @@ const Carousel = ({ children }) => {
         style={{ transform: ` translateX(-${activeIndex * 20}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "40%" });
+          return React.cloneElement(child, { width: "39%" });
         })}
       </div>
       <div className="arrows">
