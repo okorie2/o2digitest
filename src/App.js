@@ -26,15 +26,9 @@ import BottomRightArrow from "./Assets/SVGs/bottomrightarrow.svg";
 import TenDots from "./Assets/SVGs/10dotsbelow.svg";
 
 import LstEllipse from "./Assets/SVGs/LstEllipse.svg";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
 
+import Carousel, { CarouselItem } from "./Components/Carousel/Carousel";
+import "./Components/Carousel/Carousel.css";
 function App() {
   const headerLottiedefaultOptions = {
     loop: true,
@@ -98,8 +92,42 @@ function App() {
       <div className="leftPear">
         <img src={LeftPear} />
       </div>
-
-      <div className="mdgrid-cont">
+      <Carousel>
+        <CarouselItem>
+          {" "}
+          <MdCard
+            title={"Universal eBike Kit"}
+            price={"$750.00"}
+            src={BrampEbike}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          {" "}
+          <MdCard
+            title={"Brampoton eBike Kit"}
+            price={"$750.00"}
+            src={BrampEbike}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <div className="faded-card">
+            <MdCard
+              title={"Additional eBike Kit"}
+              price={"$250.00"}
+              src={BrampEbike}
+            />
+          </div>
+        </CarouselItem>
+        <CarouselItem>
+          {" "}
+          <MdCard
+            title={"Universal eBike Kit"}
+            price={"$750.00"}
+            src={BrampEbike}
+          />
+        </CarouselItem>
+      </Carousel>
+      {/* <div className="mdgrid-cont">
         <div className="md-grid-3">
           <MdCard
             title={"Brampoton eBike Kit"}
@@ -128,7 +156,7 @@ function App() {
         <div className="arrow-right">
           <img src={Right} />
         </div>
-      </div>
+      </div> */}
 
       <div className="container">
         <h3>Other Type Of Bikes</h3>
@@ -150,7 +178,7 @@ function App() {
       </div>
 
       <div className="btm-grd">
-        <div className="md-card">
+        <div className="rider-card md-card">
           {/* <p className="card-title">title</p> */}
           <Lottie
             options={riderLottieDefaultoptions}

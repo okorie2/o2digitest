@@ -74,7 +74,7 @@
 }
 
 .md-card {
-  width: 90%;
+  width: 160%;
   /* height: 95%; */
 
   padding: 4% 0;
@@ -82,8 +82,13 @@
   border-radius: 20px;
   box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.06);
 }
+
+.rider-card {
+  width: 90%;
+}
+
 .md-card img {
-  width: 60%;
+  width: 70%;
   margin-left: 20%;
 }
 .rule {
@@ -226,7 +231,7 @@
 .arrows {
   padding: 2% 0;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 76% 24%;
   background-color: transparent;
 }
 
@@ -237,6 +242,10 @@
 .arrow-right {
   text-align: left;
   margin-left: 7%;
+}
+
+.arrows img {
+  cursor: pointer;
 }
 
 .btm-grd {
